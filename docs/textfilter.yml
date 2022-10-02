@@ -1,0 +1,20 @@
+paths:
+/lang/{name}:
+tags:
+  - name: Show Filter
+get:
+  tags:
+    - "lang"
+  description: Teks yang akan diproses
+parameters:
+  - name: "name"
+    in: "path"
+    required: true
+    type: "string"
+responses:
+    '200':
+      description: Successful response
+    '400':
+      description: Bad Request
+    '500':
+      description: Internal Server Error   

@@ -1,0 +1,36 @@
+paths:
+/lang: 
+tags:
+  - name: Input Text
+post:
+  description: Input Text To Swagger
+parameters:
+  - name: name
+    description: ""
+    required: true
+    in: body
+    description: "Add Text"
+    schema:
+        $ref: "#/definitions/add_texts"
+responses:
+    '200':
+      description: Successful response
+    '400':
+      description: Bad Request
+    '500':
+      description: Internal Server Error
+      
+definitions:
+  add_text:
+    type: array
+    items:
+      $ref: "#/definitions/name"
+  add_texts:
+    type: "object"
+    required:
+      - "name"
+    properties:
+      name:
+        type: "string" 
+    example: 
+      name: "HTML/CSS"
